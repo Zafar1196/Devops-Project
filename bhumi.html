@@ -1,0 +1,553 @@
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>
+	 Online Mutation 
+</title>
+<noscript><meta http-equiv="refresh" content="0; url=checkjs.aspx" /></noscript>
+    
+    
+    <link href="favicon.ico" rel="shortcut icon" type="Images/x-icon" /><link href="Content/css.css" rel="stylesheet" /><link href="Content/font-awesome.min.css" rel="stylesheet" /><link href="Content/style.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet" /><link href="Content/PleaseWait.css" rel="stylesheet" /><link href="Content/placeHolder.css" rel="stylesheet" />
+    <script src="Scripts/Validation.js"></script>
+
+    
+    <link href="Content/jquery-ui.css.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script src="Scripts/jquery-ui.js"></script>    
+    
+    <link rel="stylesheet" type="text/css" href="Content/Searchkeyword.css" />
+     <style>
+        h11 {
+            font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+            font-size: 20px;
+            color: #696172;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 700;
+            line-height: 26.4px;
+        }
+
+        .effect3d {
+            animation-name: effect3d;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+
+        .reverse {
+            animation-direction: reverse;
+        }
+        
+        .phtext::-webkit-input-placeholder {
+color: #3445b4;
+font-size:18px;
+font-weight:bold;
+}
+
+.phtext:-moz-placeholder { /* Firefox 18- */
+color: #3445b4;  
+font-size:18px;
+font-weight:bold;
+}
+
+.phtext::-moz-placeholder {  /* Firefox 19+ */
+color: #3445b4;
+font-size:18px; 
+font-weight:bold; 
+}
+
+.phtext:-ms-input-placeholder {
+color: #3445b4;
+font-size:18px;  
+font-weight:bold;
+}
+
+        @keyframes effect3d {
+            to {
+                text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+            }
+        }
+    </style>
+
+     
+
+<script src="Content/hilitor.js"></script>
+<script>
+    window.addEventListener("DOMContentLoaded", function (e) {
+
+        var searchkeyword = "";
+        var qrStr = window.location.search;
+        if (qrStr.length > 7) {
+            var spQrStr = qrStr.substring(1);
+            var arrQrStr = new Array();
+            var arr = spQrStr.split('&');            
+            if (arr.length > 0) {
+                for (var i = 0; i < arr.length; i++) {
+                    var queryvalue = arr[i].split('=');
+                    if (queryvalue[0] == 'keyword') {
+                        var queryvalue = arr[0].split('=');
+                        searchkeyword = queryvalue[1];
+                    }
+                }
+            }
+        }
+        
+
+    var myHilitor2 = new Hilitor("playground");
+    myHilitor2.setMatchType("left");
+    myHilitor2.apply(searchkeyword);
+
+    document.getElementById("keywords").addEventListener("keyup", function (e) {
+        myHilitor2.apply(this.value);
+    }, false);
+  }, false);
+
+</script>
+
+
+    <style>
+      .dropdown {
+          position: relative;
+          display: inline-block;
+      }
+
+          .dropdown span {
+              color: #000 !important;
+              font-weight: bold;
+              background-color: #fff;
+              padding: 5px;
+          }
+
+      .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 220px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          padding: 10px 10px;
+          z-index: 99999;
+          color: #000;
+          text-align: left;
+      }
+
+          .dropdown-content ul li {
+              list-style: none;
+          }
+
+              .dropdown-content ul li a {
+                  color: #000 !important;
+                  text-align: left;
+                  padding: 5px 5px 5px 0px;
+                  clear: both;
+                  font-weight: 400;
+                  font-size: 15px;
+                  line-height: 1.42857143;
+                  color: #333;
+                  white-space: nowrap;
+              }
+
+              .dropdown-content ul li:hover {
+                  text-decoration: none;
+                  padding: 2px 2px 2px 0px;
+                  background-color: #b9b9b9 !important;
+              }
+
+              .dropdown-content ul li a:hover {
+                  color: #3445b4 !important;
+              }
+
+      .dropdown:hover .dropdown-content {
+          display: block;
+      }
+  </style>
+
+
+    
+
+
+    <style type="text/css">
+        @media only screen and (min-width: 300px) and (max-width: 783px) {
+            .gridC {
+                font-size: 4px !important;
+            }
+        }
+
+        @media only screen and (min-width: 700px) and (max-width: 1340px) {
+            #divX {
+                width: 89% !important;
+                margin-left: 11% !important;
+                position: relative;
+                margin-top: 3%;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        function OpenPopup_MutationDetails(uid, wid, did, mid, token) {
+            var newWin = window.open('Application_Status/View_Reports.aspx?uid=' + uid + '&wid=' + wid + '&did=' + did + '&mid=' + mid + '&token=' + token + '', null, 'width=900,height=800, status=no,resizable=no, scrollbars=yes, toolbar=no,location=no, menubar=no');
+            if (!newWin || newWin.closed || typeof newWin.closed == 'undefined') {
+                alert("Popup Blocker is enabled! Please add this site to your exception list.");
+            }
+        }
+
+        var isPopupBlockerActivated = function (popupWindow) {
+            if (popupWindow) {
+                if (/chrome/.test(navigator.userAgent.toLowerCase())) {
+                    try {
+                        popupWindow.focus();
+                    } catch (e) {
+                        return true;
+                    }
+                } else {
+                    popupWindow.onload = function () {
+                        return (popupWindow.innerHeight > 0) === false;
+                    };
+                }
+            } else {
+                return true;
+            }
+            return false;
+        };
+
+    </script>
+    
+</head>
+<body>
+    <form method="post" action="./MutationStatusNew" id="ctl01" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="PM7C6UjAzkfe1glv5Qv8dO6G5rqF6ZGtTo1iFkeLLl4o2bj60xdGza5+fZ1G1+nrJzy/GE+y9Xm1E56+XOWabFFQtQz7vTkSsC7LTiZh6fMkBICbasp9YxWwmxBsue4u6VnvLbS/Yhu8QWSW2VUqaZIa6/B8B/tXYC0DiYIWpcDkdvmdv8uK8xlUATDPJaoJ+nS/qAQCFReGbNqIbIGo+IPyZ98BMGFSMNkKB9zPVWaN0SozdEQAdq71sE949OAXaEyx3xB09uSycnQfEl1SWcEe5i3LfXpd0hWDArOU/YAkRLQ5VEDyUSlVUq5ExQIpkaRqhZjJrn9pl1femoBx+1wOYjl89F4XeQcIX8T19GNCbzaBveLAsWUfjcFP9wW0I3ibakJB8xJ186//nPy1eJYOkKndZD34txaUHQbe9Ldwh/Odjah0U/w/blQnTdNORh0XTL/5Dyp0jliY6dcv+qVE/hpsx22UGq6LRaVeZXRSIMuVYID4bmwhsjRhOb4c50Lxt0SaVCrGRNmw7o783vhk0qfQTyfEf5LkR+4uPceKWLVGq765ObtkROz0mP4l/+5V07g2nk9Go45KB8RAIl6c6b3YF9FiKorM48+1ipEnEc9Ff60G2mkH6i1J6LWYylyAYReupNeYlbXbRUAL1P+uGEW922uavKgSU2Vm/r2OmpYjlUOuDvFoTJ8KHMdqNEeOH62PXCG6mMvXfnZK2T73SSQwarjAAr00ULzoPpC2lvm/WsJxfWIRu3UrkxayWnpuVStJdoin36bb+KonQ2ZacOQTUti9MWH2nJpw43bzEcIn9eKfsqSxlSluPMbWNk7eSiFiwD6vBtKiX2JKmcaUbg/A+sGS1JTX4D+jbi6j6BvWnGM2COhXIn9VN59CE+FIt7AfYz0Va4FuHFBPwdanCU2jWJxs+wC7R0vmK3aC0AU8qzlnGgS1Mvf9kaU5" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['ctl01'];
+if (!theForm) {
+    theForm = document.ctl01;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/biharBhumireport/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZL5-MYqjRy2cYafWmc3pBHFnI5XScJ3TGglYB5vVFFFDNqErN6sUPVDbdVSApoZEoA2&amp;t=637823563705833095" type="text/javascript"></script>
+
+
+<script src="Scripts/WebForms/MsAjax/MicrosoftAjax.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="Scripts/WebForms/MsAjax/MicrosoftAjaxWebForms.js" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="BB0DECBA" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl15', 'ctl01', ['tctl00$MainContent$Updatepanel1','MainContent_Updatepanel1'], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+        <div id="playground" style="background-color: #ffffff;">
+        <div class="top-menu-right" style="padding-bottom: 20px;padding-top:10px;padding-left:0;padding-right:0">
+           <div class="row">
+                
+                
+ 
+
+ 
+
+
+                  
+
+
+                    
+                </div>
+              
+              
+            
+           </div>
+        </div>
+
+        <div class="col-md-12" style="background-color: white; margin-top: -13px;border-bottom:1px solid #3445b4;">
+            <div class="row">
+                <div class="col-md-1" style="margin-top:20px;">
+                    <img src="Images_Gov/logo2_new1.png" />
+                </div>
+                <div class="col-md-11" style="text-align-last: center; align-self: center;text-align:center">
+                    <h1 class="effect3d">
+                        <span style="color:#3e0e6e">बिहार सरकार</span> 
+                        <div style="height:5px"></div>
+                        <span style=" color:#000000">राजस्व एवं भूमि सुधार विभाग</span>
+
+                    </h1> 
+                </div>
+            </div>
+        </div>
+
+            <div  >
+            
+
+
+
+
+
+
+
+           
+
+
+
+                 <div class="col-md-6">
+                   
+
+  </div>
+  <div class="col-md-6">
+ 
+  </div>
+
+
+      
+  
+                   
+
+        
+
+               
+
+
+
+
+
+ 
+        <div class="wrapper d-flex">
+            <div class="col-mb-12" style="width:100%">               
+                <div class="md5-pad" style="min-height:350px !important;">
+                    
+                    
+
+    <div id="MainContent_Updatepanel1">
+	
+
+            <div class="col-md-12" style="width: 98%; color: #000000 !important;">
+                <div class="card">
+                    <span class="card-header text-center" style="color: orangered; min-height: 50px; font-size: 22px;"><b>APPLICATION STATUS OF MUTATION (म्युटेशन आवेदन की स्तिथि)</b></span>                    
+                    <div class="row" style="margin-top: 10px; margin-left: 10px;">
+                        <div class="col-lg-12 col-mg-12">
+                            <div class="col-sm-3 col-lg-3" style="margin-bottom: 15px;">
+                                <span class="has-float-label">
+                                    <select name="ctl00$MainContent$ddlDistrict" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$ddlDistrict\&#39;,\&#39;\&#39;)&#39;, 0)" id="MainContent_ddlDistrict" class="form-control" style="font-size:14px;width:100%;">
+		<option selected="selected" value="0">**Select District**</option>
+		<option value="7">Araria</option>
+		<option value="38">Arwal</option>
+		<option value="34">Aurangabad</option>
+		<option value="23">Banka</option>
+		<option value="20">Begusarai</option>
+		<option value="22">Bhagalpur</option>
+		<option value="29">Bhojpur</option>
+		<option value="30">Buxar</option>
+		<option value="13">Darbhanga</option>
+		<option value="2">East Champaran</option>
+		<option value="35">Gaya</option>
+		<option value="15">Gopalganj</option>
+		<option value="37">Jamui</option>
+		<option value="33">Jehanabad</option>
+		<option value="31">Kaimur</option>
+		<option value="10">Katihar</option>
+		<option value="21">Khagaria</option>
+		<option value="8">Kishanganj</option>
+		<option value="25">Lakhisarai</option>
+		<option value="11">Madhepura</option>
+		<option value="5">Madhubani</option>
+		<option value="24">Munger</option>
+		<option value="14">Muzaffarpur</option>
+		<option value="1">Nalanda</option>
+		<option value="36">Nawada</option>
+		<option value="28">Patna</option>
+		<option value="9">Purnea</option>
+		<option value="32">Rohtas</option>
+		<option value="12">Saharasa</option>
+		<option value="19">Samastipur</option>
+		<option value="17">Saran</option>
+		<option value="26">Sheikhpura</option>
+		<option value="3">Sheohar</option>
+		<option value="4">Sitamarhi</option>
+		<option value="16">Siwan</option>
+		<option value="6">Supaul</option>
+		<option value="18">Vaishali</option>
+		<option value="27">West Champaran</option>
+
+	</select>
+                                    <label>जिला <span class="required">*</span></label>
+                                </span>
+                                <span id="error_District" class="error"></span>
+                            </div>
+                            <div class="col-sm-3 col-lg-3" style="margin-bottom: 15px;">
+                                <span class="has-float-label">
+                                    <select name="ctl00$MainContent$ddlCircle" id="MainContent_ddlCircle" class="form-control" style="font-size:14px;width:100%;">
+		<option value="---चयन करे---">---चयन करे---</option>
+
+	</select>
+                                    <label>अचंल <span class="required">*</span></label>
+                                </span>
+                                <span id="error_Circle" class="error"></span>
+                            </div>
+
+                            <div class="col-sm-3 col-lg-3 ">
+                                <span class="has-float-label">
+                                    <select name="ctl00$MainContent$ddlYearSession" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$ddlYearSession\&#39;,\&#39;\&#39;)&#39;, 0)" id="MainContent_ddlYearSession" class="form-control" style="font-size:14px;width:100%;">
+		<option selected="selected" value="0">वित्तीय वर्ष चुने</option>
+		<option value="2017">2017 - 2018</option>
+		<option value="2018">2018 - 2019</option>
+		<option value="2019">2019 - 2020</option>
+		<option value="2020">2020 - 2021</option>
+		<option value="2021">2021 - 2022</option>
+		<option value="2022">2022 - 2023</option>
+		<option value="2023">2023 - 2024</option>
+		<option value="2024">2024 - 2025</option>
+
+	</select>
+                                    <label>वित्तीय वर्ष<span class="required">*</span></label>
+                                </span>
+                                <span id="error_YearSession" class="error"></span>
+                            </div>
+
+                            <div class="ccol-sm-3 col-lg-3" >
+                                <span class="has-float-label">
+                                     <input type="submit" name="ctl00$MainContent$btnproceed" value=" Proceed " id="MainContent_btnproceed" class="btn btn-success" />
+                                  &nbsp;&nbsp;  <input type="submit" name="ctl00$MainContent$Button1" value=" Reset " id="MainContent_Button1" class="btn btn-danger" />
+                                </span>
+                                <span id="error_" class="error"></span>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <hr />
+
+                    <div class="col-md-12" style="margin-left: 20px;">
+                        <div class="row">
+                            <div class="col-sm-2 col-lg-2">
+                                <span class="aspNetDisabled"><input id="MainContent_rdo_caseno" type="radio" name="ctl00$MainContent$rdoSearch" value="rdo_caseno" disabled="disabled" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$rdo_caseno\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="MainContent_rdo_caseno">केस नंबर से खोजे</label></span>
+                            </div>
+                            <div class="col-sm-2 col-lg-2">
+                                <input name="ctl00$MainContent$txt_Case_No" type="text" id="MainContent_txt_Case_No" disabled="disabled" class="aspNetDisabled form-control" />
+                            </div>
+                            <div class="col-sm-2 col-lg-2">
+                                &nbsp; &nbsp;
+                                <span class="aspNetDisabled"><input id="MainContent_rdo_deedno" type="radio" name="ctl00$MainContent$rdoSearch" value="rdo_deedno" disabled="disabled" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$rdo_deedno\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="MainContent_rdo_deedno">डीड नंबर से खोजे</label></span>
+                            </div>
+                            <div class="col-sm-2 col-lg-2">
+                                <input name="ctl00$MainContent$txt_deedno" type="text" id="MainContent_txt_deedno" disabled="disabled" class="aspNetDisabled form-control" />
+                            </div>
+                              <div class="col-sm-3 col-lg-3">
+                                   <select name="ctl00$MainContent$ddlfyear" id="MainContent_ddlfyear" disabled="disabled" class="aspNetDisabled form-control" style="font-size:14px;width:100%;">
+		<option selected="selected" value="0">Select Registration Year</option>
+		<option value="2018">2018</option>
+		<option value="2019">2019</option>
+		<option value="2020">2020</option>
+		<option value="2021">2021</option>
+		<option value="2022">2022</option>
+		<option value="2023">2023</option>
+
+	</select>
+                            </div>
+                        </div>
+                        </div>
+                    <hr />
+                   
+                    
+                    <div class="col-md-12" style="margin-left: -14px;">
+                        <div class="row">
+                        <div class="col-sm-2 col-lg-2">
+                             <label>                                
+                                <span class="aspNetDisabled" style="font-size:Medium;margin-left:30px"><input id="MainContent_rdbtnMaujaWise" type="radio" name="ctl00$MainContent$rdoSearch" value="rdbtnMaujaWise" disabled="disabled" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$rdbtnMaujaWise\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="MainContent_rdbtnMaujaWise">मौजा से खोजे</label></span>                                
+                            </label> 
+                            </div> 
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                             <div class="col-sm-2 col-lg-2">                        
+                            <select name="ctl00$MainContent$ddlstMaujaWise" id="MainContent_ddlstMaujaWise" disabled="disabled" class="aspNetDisabled" style="height:32px;width:190px;">
+
+	</select>
+                            </div>  
+                            
+                            <div class="col-sm-2 col-lg-2">
+                                <span class="aspNetDisabled"><input id="MainContent_Chk_plot" type="checkbox" name="ctl00$MainContent$Chk_plot" disabled="disabled" /><label for="MainContent_Chk_plot">प्लाट नंबर से खोजे</label></span>
+                            </div>
+                            <div class="col-sm-2 col-lg-2">
+                                <input name="ctl00$MainContent$txt_plot" type="text" id="MainContent_txt_plot" disabled="disabled" class="aspNetDisabled form-control" />
+                            </div>                     
+                       
+                    </div>
+                    </div>
+
+                    <div style="text-align:center;width:100%;margin-top:10px">
+<div > <b>सुरक्षा कोड : </b> &nbsp;&nbsp;<input name="ctl00$MainContent$TextBox1" type="text" value="2 + 1" id="MainContent_TextBox1" disabled="disabled" class="aspNetDisabled" style="width:80px;" /> 
+           &nbsp;&nbsp;<b>=</b>&nbsp;&nbsp;
+    <input name="ctl00$MainContent$TextBox2" type="text" maxlength="5" id="MainContent_TextBox2" autocomplete="off" onkeypress="if((event.keyCode &lt; 48 || event.keyCode > 57) &amp; event.keyCode != 8)event.returnValue=false;" style="width:80px;" />
+         
+                      </div>
+          
+        </div>
+
+                     <div style="text-align:center;margin-top:20px">
+                            <span id="MainContent_lblError" style="color:Red;font-size:Large;font-weight:bold;"></span>
+                        </div>
+                    <hr />
+
+
+                    <div class="col-md-12" style="text-align:center">
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-12">
+                                
+                                <input type="submit" name="ctl00$MainContent$btnSearch" value="Search" id="MainContent_btnSearch" class="btn btn-success m-t-15 waves-effect" style="width: 150px; margin: 5px; align-self: center; height: 50px; font-size: 25px;" />
+                                
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <br />
+                    
+
+                </div>
+            </div>
+
+        
+</div>
+    
+
+                </div>
+                <br />
+                                
+            </div>
+        </div>        
+        <div class="footerrowbelow border-top" text-align: center; font-weight: bold; style="padding-bottom:5px">
+            <br />
+          Department of Revenue and Land Reforms, Government of Bihar, Old Secretariat, Bailey Road, Patna - 800015
+            <br>
+Site designed and developed by NIC, Bihar. Contents provided and maintained by Dept. of Revenue & Land Reforms, Government of Bihar.
+            <br /><br />
+            <a href="Disclaimer.pdf" style="color:red;font-size:14px;background-color:white;padding:5px" target="_blank">Disclaimer</a>
+        </div>
+            </div>
+    </form>
+
+    
+</body>
+</html>

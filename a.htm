@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        input {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body bgcolor="sky blue">
+    <br /> <br />
+
+
+    <center><h1> || My First Project ||</h1></center>
+    <div class="container">
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Replace these with your desired username and password
+            const correctUsername = 'admin';
+            const correctPassword = 'password';
+
+            if (username === correctUsername && password === correctPassword) {
+                window.location.href = 'https://www.google.com/'; // Redirect to a new page
+            } else {
+                alert('Incorrect username or password');
+            }
+        }
+    </script>
+</body>
+</html>
